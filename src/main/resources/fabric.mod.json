@@ -5,11 +5,11 @@
 	"name": "wynnarsch",
 	"description": "Wynnarsch auf die 1",
 	"authors": [
-		"Me!"
+		"JulianH06"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/JulianH06/wynnarsch-1.21.4"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/wynnarsch/icon.png",
@@ -32,7 +32,8 @@
 		"fabricloader": ">=0.16.14",
 		"minecraft": "~1.21.4",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"wynntils": "*"
 	},
 	"suggests": {
 		"another-mod": "*"
