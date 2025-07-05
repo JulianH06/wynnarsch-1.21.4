@@ -1,5 +1,6 @@
 package julianh06.wynnarsch;
 
+import julianh06.wynnarsch.notg.BossPlayerHider;
 import julianh06.wynnarsch.notg.canon.CanonHotkeys;
 import net.fabricmc.api.ModInitializer;
 
@@ -21,5 +22,6 @@ public class Wynnarsch implements ModInitializer {
 		// Proceed with mild caution.
 
 		CanonHotkeys.registerCanonHotkeys();
+		BossPlayerHider.registerBossPlayerHider();
 	}
 }
