@@ -8,7 +8,7 @@ Hotkeys for the canon in NOTG's second room, press A and D to move and SPACE to 
   
 # 🗒️ PLANNED FEATURES
 - Block overlay for the NOTG canon
-- Hiding players inside/close to you in the NOTG (and possible other) bossfight
+- Hiding players inside/close to you in the NOTG (and possibly other) bossfight
 
 # 🐘 HOW TO COMPILE
 - This repo currently only has the source code, i'm going to add a compiled release sometime in the future, to compile the mod yourself you can open the repo in IntelliJ, click on the Gradle icon on the right,
