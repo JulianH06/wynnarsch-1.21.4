@@ -1,5 +1,6 @@
 package julianh06.wynnarsch;
 
+import julianh06.wynnarsch.notg.canon.CanonHotkeys;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -19,6 +20,6 @@ public class Wynnarsch implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		CanonHotkeys.registerCanonHotkeys();
 	}
 }

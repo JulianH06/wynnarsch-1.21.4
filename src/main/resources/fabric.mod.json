@@ -17,12 +17,6 @@
 	"entrypoints": {
 		"main": [
 			"julianh06.wynnarsch.Wynnarsch"
-		],
-		"fabric-datagen": [
-			"julianh06.wynnarsch.WynnarschDataGenerator"
-		],
-		"client": [
-			"julianh06.wynnarsch.WynnarschClient"
 		]
 	},
 	"mixins": [
