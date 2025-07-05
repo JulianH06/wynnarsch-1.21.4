@@ -16,4 +16,6 @@ Hotkeys for the canon in NOTG's second room, press A and D to move and SPACE to 
 
   A more detailed explanation can be found here:
   
-  [![Video explaining how to compile](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=5YmUIDY7dm8)
+  [![Video](https://img.youtube.com/vi/5YmUIDY7dm8/maxresdefault.jpg)](https://youtu.be/5YmUIDY7dm8)
+
+### [Video explaining how to compile](https://youtu.be/5YmUIDY7dm8)
