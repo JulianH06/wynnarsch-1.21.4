@@ -1,6 +1,6 @@
 # 🌟 FEATURES
 
-Hotkeys for the canon in NOTG's second room, press A and D to move and SPACE to shoot (hotkeys currently not customizable ingame)
+- Hotkeys for the canon in NOTG's second room, press A and D to move and SPACE to shoot (hotkeys currently not customizable ingame)
 
 
   <img src="https://github.com/user-attachments/assets/bd983137-16fb-474c-95f5-6da4366662c2" width="600px" alt="Showcase"/>
@@ -18,4 +18,5 @@ Hotkeys for the canon in NOTG's second room, press A and D to move and SPACE to 
   
   [![Video](https://img.youtube.com/vi/5YmUIDY7dm8/maxresdefault.jpg)](https://youtu.be/5YmUIDY7dm8)
 
-### [Video explaining how to compile](https://youtu.be/5YmUIDY7dm8)
+
+  [Video explaining how to compile](https://youtu.be/5YmUIDY7dm8)
