@@ -1,5 +1,5 @@
 #🌟 FEATURES
-  ![image](https://github.com/user-attachments/assets/bd983137-16fb-474c-95f5-6da4366662c2)
+  \n![image](https://github.com/user-attachments/assets/bd983137-16fb-474c-95f5-6da4366662c2)
 - Hotkeys for the canon in NOTG's second room, press A and D to move and SPACE to shoot (currently not customizable ingame)
 
 #🗒️ PLANNED FEATURES
@@ -11,4 +11,4 @@
   go into Tasks>build and double-click build, then you should find a .jar file in <wynnarsch folder>/build/libs
 
   A more detailed explanation can be found here:
-  https://www.youtube.com/watch?v=5YmUIDY7dm8
+  [![Video explaining how to compile](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=5YmUIDY7dm8)
