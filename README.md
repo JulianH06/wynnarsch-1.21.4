@@ -5,10 +5,14 @@
 
   <img src="https://github.com/user-attachments/assets/bd983137-16fb-474c-95f5-6da4366662c2" width="600px" alt="Showcase"/>
 
+- Hide Nearby Party Members (Currently works everywhere, i will change it to only happen while in raid bosses at some point in the future)
+
+  <img src="https://github.com/user-attachments/assets/9888c912-6391-469a-ac6c-bd344ca11236" width="600px" height="200px" alt="Showcase"/>
+
+
   
 # 🗒️ PLANNED FEATURES
 - Block overlay for the NOTG canon
-- Hiding players inside/close to you in the NOTG (and possibly other) bossfight
 
 # 🐘 HOW TO COMPILE
 - This repo currently only has the source code, i'm going to add a compiled release sometime in the future, to compile the mod yourself you can open the repo in IntelliJ, click on the Gradle icon on the right,
