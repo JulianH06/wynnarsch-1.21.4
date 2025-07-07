@@ -5,7 +5,7 @@
 
   <img src="https://github.com/user-attachments/assets/bd983137-16fb-474c-95f5-6da4366662c2" width="600px" alt="Showcase"/>
 
-- Hide nearby party members for better vision (Currently works everywhere, i will change it to only happen while in raid bosses at some point in the future)
+- Hide nearby party members for better vision (Currently works everywhere, i will change it to only happen while in raid bosses at some point in the future (but its toggleable and you can change the distance!))
 
   <img src="https://github.com/user-attachments/assets/9888c912-6391-469a-ac6c-bd344ca11236" width="600px" alt="Showcase"/>
 
