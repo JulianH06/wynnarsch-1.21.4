@@ -6,6 +6,7 @@ import com.wynntils.functions.SocialFunctions;
 import com.wynntils.models.players.event.HadesRelationsUpdateEvent;
 import com.wynntils.overlays.PartyMembersOverlay;
 import com.wynntils.utils.mc.McUtils;
+import julianh06.wynnarsch.WynnarschConfig;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
@@ -23,9 +24,13 @@ import java.util.Objects;
 import static julianh06.wynnarsch.render.PlayerRenderFilter.*;
 
 public class BossPlayerHider {
-    //TODO
     public static void registerBossPlayerHider() {
         ClientTickEvents.START_CLIENT_TICK.register((tick) -> {
+            if(!WynnarschConfig.INSTANCE.partyMemberHide) {
+                return;
+            }
+            int Distance = WynnarschConfig.INSTANCE.maxHideDistance;
+
             MinecraftClient client = MinecraftClient.getInstance();
             if(client.player == null || client.world == null) { return; }
 
@@ -54,7 +59,7 @@ public class BossPlayerHider {
                 }
 
                 double distance = player.getPos().distanceTo(me.getPos());
-                if (distance >= 3) {
+                if (distance >= Distance) {
                     if(isHidden(player)) { show(player); }
                     continue;
                 }
