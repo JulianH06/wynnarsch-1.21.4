@@ -7,7 +7,7 @@
 
 - Hide nearby party members for better vision (Currently works everywhere, i will change it to only happen while in raid bosses at some point in the future)
 
-  <img src="https://github.com/user-attachments/assets/9888c912-6391-469a-ac6c-bd344ca11236" width="600px" height="200px" alt="Showcase"/>
+  <img src="https://github.com/user-attachments/assets/9888c912-6391-469a-ac6c-bd344ca11236" width="600px" alt="Showcase"/>
 
   
 # 🗒️ PLANNED FEATURES
