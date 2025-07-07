@@ -12,7 +12,7 @@
   
 # 🗒️ PLANNED FEATURES
 - Block overlay for the NOTG canon
-- Settings
+- More Settings
 
 # 🐘 HOW TO COMPILE
 - This repo currently only has the source code, i'm going to add a compiled release sometime in the future, to compile the mod yourself you can open the repo in IntelliJ, click on the Gradle icon on the right,
