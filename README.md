@@ -2,7 +2,7 @@
 
 - Overlay for the cannon in NOTG's second room
 
-  <img src=https://github.com/user-attachments/assets/56ee2b56-6d87-4647-b2c8-6d0064564fb1) width="600px" alt="Showcase"/>
+  <img src="https://github.com/user-attachments/assets/56ee2b56-6d87-4647-b2c8-6d0064564fb1" width="600px" alt="Showcase"/>
 
 - Hotkeys for the cannon in NOTG's second room, press A and D to move and SPACE to shoot (hotkeys currently not customizable ingame)
 
