@@ -1,6 +1,6 @@
 # 🌟 FEATURES
 
-- Overlay for the cannon in NOTG's second room
+- Overlay for the cannon in NOTG's second room, the indicator moves everytime you shoot. All sizes and Offsets are customizable in the ModMenu!
 
   <img src="https://github.com/user-attachments/assets/56ee2b56-6d87-4647-b2c8-6d0064564fb1" width="600px" alt="Showcase"/>
 
