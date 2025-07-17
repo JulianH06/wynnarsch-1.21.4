@@ -47,7 +47,7 @@ public class CannonHotkeys {
                 }
                 if (isPressedShoot && !wasPressedShoot && currScreenHandler.getSlot(4).getStack().getItem() == Items.FIRE_CHARGE) {
                     clickOnSlot(4, currScreenHandler.syncId, 0, currScreenHandler.getStacks());
-                    if(client.currentScreen != null) { //didnt test this yet, may brake something TODO
+                    if(client.currentScreen != null) {
                         client.currentScreen.close();
                     }
                     CannonOverlay.currentPosition++;
