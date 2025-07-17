@@ -17,7 +17,7 @@
 - Nothing here rn! More coming soon
 
 # 🐘 HOW TO COMPILE
-- This repo currently only has the source code, i'm going to add a compiled release sometime in the future, to compile the mod yourself you can open the repo in IntelliJ, click on the Gradle icon on the right,
+- If you want to compile the mod yourself, follow these steps: open the repo in IntelliJ, click on the Gradle icon on the right,
   go into Tasks>build and double-click build, then you should find a .jar file in <wynnarsch folder>/build/libs
 
   A more detailed explanation can be found here:
