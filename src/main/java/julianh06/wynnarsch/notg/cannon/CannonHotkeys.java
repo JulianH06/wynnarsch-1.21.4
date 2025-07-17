@@ -47,7 +47,13 @@ public class CannonHotkeys {
                 }
                 if (isPressedShoot && !wasPressedShoot && currScreenHandler.getSlot(4).getStack().getItem() == Items.FIRE_CHARGE) {
                     clickOnSlot(4, currScreenHandler.syncId, 0, currScreenHandler.getStacks());
+                    if(client.currentScreen != null) { //didnt test this yet, may brake something TODO
+                        client.currentScreen.close();
+                    }
                     CannonOverlay.currentPosition++;
+                    if(WynnarschConfig.INSTANCE.keyNotgCannonShootID == 32) {
+                        MinecraftClient.getInstance().options.jumpKey.setPressed(false);
+                    }
                 }
                 if (isPressedRight && !wasPressedRight &&currScreenHandler.getSlot(6).getStack().getItem() == Items.GOLDEN_SHOVEL) {
                     clickOnSlot(6, currScreenHandler.syncId, 0, currScreenHandler.getStacks());

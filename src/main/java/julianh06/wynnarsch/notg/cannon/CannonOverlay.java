@@ -113,12 +113,13 @@ public class CannonOverlay {
                 if (client.currentScreen != null && CannonHotkeys.isInCannon) {
                     RenderUtils.drawRect(context.getMatrices(), CustomColor.fromInt(-804253680), 0, 0, 0, client.currentScreen.width, client.currentScreen.height);
                 }
+                //Brown stripe
                 RenderUtils.drawRect(context.getMatrices(),
                         CustomColor.fromInt(0x82654c),
                         conf.NotgCannonOverlayOffsetX,
                         conf.NotgCannonOverlayOffsetY + conf.NotgCannonBlockHeight,
                         0,
-                        conf.NotgCannonOverlayOffsetX + conf.NotgCannonBlockWidth * 5,
+                        conf.NotgCannonBlockWidth * 5,
                         conf.NotgCannonCurrentBlockHeight);
                 for (int i = 0; i < 5; i++) {
                     CustomColor color;
@@ -132,6 +133,7 @@ public class CannonOverlay {
                     RenderUtils.drawRect(poseStack, color, i * conf.NotgCannonBlockWidth + conf.NotgCannonOverlayOffsetX, conf.NotgCannonOverlayOffsetY, 0, conf.NotgCannonBlockWidth, conf.NotgCannonBlockHeight);
                 }
                 if(currentPosition < 5) {
+                    //green indicator
                     RenderUtils.drawRect(poseStack, CustomColor.fromInt(0xFF339933), currentPosition * conf.NotgCannonBlockWidth + conf.NotgCannonOverlayOffsetX, conf.NotgCannonOverlayOffsetY + conf.NotgCannonBlockHeight, 0, conf.NotgCannonBlockWidth, conf.NotgCannonCurrentBlockHeight);
                 }
             });
