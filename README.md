@@ -1,18 +1,20 @@
 # 🌟 FEATURES
 
-- Hotkeys for the canon in NOTG's second room, press A and D to move and SPACE to shoot (hotkeys currently not customizable ingame)
+- Overlay for the cannon in NOTG's second room, the indicator moves everytime you shoot. All sizes and Offsets are customizable in the ModMenu!
 
+  <img src="https://github.com/user-attachments/assets/56ee2b56-6d87-4647-b2c8-6d0064564fb1" width="600px" alt="Showcase"/>
+
+- Hotkeys for the cannon in NOTG's second room, press A and D to move and SPACE to shoot (with the default keybinds)
 
   <img src="https://github.com/user-attachments/assets/bd983137-16fb-474c-95f5-6da4366662c2" width="600px" alt="Showcase"/>
 
-- Hide nearby party members for better vision (Currently works everywhere, i will change it to only happen while in raid bosses at some point in the future)
+- Hide nearby party members for better vision (Currently works everywhere, i will change it to only happen while in raid bosses at some point in the future (but its toggleable and you can change the distance!))
 
   <img src="https://github.com/user-attachments/assets/9888c912-6391-469a-ac6c-bd344ca11236" width="600px" alt="Showcase"/>
 
   
 # 🗒️ PLANNED FEATURES
-- Block overlay for the NOTG canon
-- Settings
+- Nothing here rn! More coming soon
 
 # 🐘 HOW TO COMPILE
 - This repo currently only has the source code, i'm going to add a compiled release sometime in the future, to compile the mod yourself you can open the repo in IntelliJ, click on the Gradle icon on the right,
