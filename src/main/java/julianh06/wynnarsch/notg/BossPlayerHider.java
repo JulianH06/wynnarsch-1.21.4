@@ -1,25 +1,11 @@
 package julianh06.wynnarsch.notg;
 
-import com.wynntils.core.WynntilsMod;
 import com.wynntils.core.components.Models;
-import com.wynntils.functions.SocialFunctions;
-import com.wynntils.models.players.event.HadesRelationsUpdateEvent;
-import com.wynntils.overlays.PartyMembersOverlay;
-import com.wynntils.utils.mc.McUtils;
 import julianh06.wynnarsch.WynnarschConfig;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.network.ClientPlayerEntity;
-import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.fabricmc.fabric.api.client.rendering.v1.*;
-import net.minecraft.scoreboard.*;
-
-import java.util.Collection;
-import java.util.Objects;
 
 import static julianh06.wynnarsch.render.PlayerRenderFilter.*;
 
@@ -44,7 +30,7 @@ public class BossPlayerHider {
                         }
                     }
                 }
-            }*/ //TODO: nur im Boss hiden
+            }*/ //TODO: only hide in boss
 
             ClientPlayerEntity me = client.player;
 
@@ -65,7 +51,6 @@ public class BossPlayerHider {
                 }
 
                 boolean isPartyMember = false;
-                //HadesRelationsUpdateEvent.PartyList
                 for (String partyMember : Models.Party.getPartyMembers()) {
                     if(player.getName().getString().equals(partyMember)) {
                         isPartyMember = true;
@@ -76,7 +61,6 @@ public class BossPlayerHider {
 
                 System.out.println("Spieler in der Nähe: " + player.getName().getString() + " Distance: " + distance + " isPartymember: " + isPartyMember);
                 hide(player);
-                //client.world.removeEntity(player.getId(), Entity.RemovalReason.DISCARDED);
             }
         });
     }

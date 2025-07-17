@@ -5,7 +5,6 @@ import julianh06.wynnarsch.WynnarschConfig;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.util.InputUtil;
 import net.minecraft.item.Items;
 import net.minecraft.screen.ScreenHandler;
 import com.wynntils.utils.mc.McUtils;
@@ -38,17 +37,6 @@ public class CannonHotkeys {
 
             if(InventoryTitle.equals("Cannon")) {
                 isInCannon = true;
-                /*InputUtil.Key leftKey = checkKey(client.getWindow().getHandle() ,WynnarschConfig.INSTANCE.keyNotgCannonLeftID);
-                InputUtil.Key shootKey = Wynnarsch.getBoundKey(Wynnarsch.keyNotgCannonShoot);
-                InputUtil.Key rightKey = Wynnarsch.getBoundKey(Wynnarsch.keyNotgCannonRight);
-
-                boolean isPressedLeft = checkKey(client.getWindow().getHandle(), leftKey.getCode());
-                boolean isPressedShoot = checkKey(client.getWindow().getHandle(), shootKey.getCode());
-                boolean isPressedRight = checkKey(client.getWindow().getHandle(), rightKey.getCode());
-
-                boolean isPressedLeft = Wynnarsch.keyNotgCannonLeft.isPressed();
-                boolean isPressedShoot = Wynnarsch.keyNotgCannonShoot.isPressed();
-                boolean isPressedRight = Wynnarsch.keyNotgCannonRight.isPressed();*/
 
                 boolean isPressedLeft = checkKey(MinecraftClient.getInstance().getWindow().getHandle(), WynnarschConfig.INSTANCE.keyNotgCannonLeftID);
                 boolean isPressedShoot = checkKey(MinecraftClient.getInstance().getWindow().getHandle(), WynnarschConfig.INSTANCE.keyNotgCannonShootID);

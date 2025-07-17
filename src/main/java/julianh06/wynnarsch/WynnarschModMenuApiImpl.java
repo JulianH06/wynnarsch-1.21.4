@@ -1,17 +1,13 @@
 package julianh06.wynnarsch;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
-import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import julianh06.wynnarsch.notg.cannon.CannonOverlay;
 import julianh06.wynnarsch.notg.cannon.ColorEnum;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.impl.builders.SubCategoryBuilder;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.fabricmc.loader.api.FabricLoader;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
-import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
 
