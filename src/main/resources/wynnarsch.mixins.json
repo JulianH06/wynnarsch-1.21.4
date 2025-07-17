@@ -2,9 +2,6 @@
   "required": true,
   "package": "julianh06.wynnarsch.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "ExampleMixin"
-  ],
   "injectors": {
     "defaultRequire": 1
   },
@@ -12,6 +9,10 @@
     "requireAnnotations": true
   },
   "client": [
+    "InventoryScreenMixin",
     "LivingEntityRendererMixin"
+  ],
+  "mixins": [
+    "RaidChallengeEventMixin"
   ]
 }
