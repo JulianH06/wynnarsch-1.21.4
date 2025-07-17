@@ -10,6 +10,7 @@ import java.io.Reader;
 import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import me.shedaniel.math.Color;
 
 public class WynnarschConfig {
     public boolean partyMemberHide = true;
@@ -23,6 +24,8 @@ public class WynnarschConfig {
     public int NotgCannonOverlayOffsetX = 0;
     public int NotgCannonOverlayOffsetY = 0;
     public boolean NotgCannonOverlayPreview = false;
+    public boolean NotgCannonOverlayToggle = true;
+    public Color NotgCannonIndicatorColor = Color.ofRGB(51, 153, 51);
 
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final Path CONFIG_PATH = FabricLoader.getInstance()

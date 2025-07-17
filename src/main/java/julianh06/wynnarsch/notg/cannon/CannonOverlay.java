@@ -55,6 +55,10 @@ public class CannonOverlay {
             if (world == null) {
                 return;
             }
+            if(!WynnarschConfig.INSTANCE.NotgCannonOverlayToggle) {
+                isValid = false;
+                return;
+            }
             if(WynnarschConfig.INSTANCE.NotgCannonOverlayPreview) {
                 isValid = true;
                 currentPosition = 0;
@@ -133,8 +137,8 @@ public class CannonOverlay {
                     RenderUtils.drawRect(poseStack, color, i * conf.NotgCannonBlockWidth + conf.NotgCannonOverlayOffsetX, conf.NotgCannonOverlayOffsetY, 0, conf.NotgCannonBlockWidth, conf.NotgCannonBlockHeight);
                 }
                 if(currentPosition < 5) {
-                    //green indicator
-                    RenderUtils.drawRect(poseStack, CustomColor.fromInt(0xFF339933), currentPosition * conf.NotgCannonBlockWidth + conf.NotgCannonOverlayOffsetX, conf.NotgCannonOverlayOffsetY + conf.NotgCannonBlockHeight, 0, conf.NotgCannonBlockWidth, conf.NotgCannonCurrentBlockHeight);
+                    //indicator
+                    RenderUtils.drawRect(poseStack, CustomColor.fromInt(conf.NotgCannonIndicatorColor.getColor()), currentPosition * conf.NotgCannonBlockWidth + conf.NotgCannonOverlayOffsetX, conf.NotgCannonOverlayOffsetY + conf.NotgCannonBlockHeight, 0, conf.NotgCannonBlockWidth, conf.NotgCannonCurrentBlockHeight);
                 }
             });
         });

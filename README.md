@@ -14,7 +14,9 @@
 
   
 # 🗒️ PLANNED FEATURES
-- Nothing here rn! More coming soon
+- Indicator where the cannon is and where it needs to be next (not sure yet tho)
+- NOL Invisible maze highlighter
+- NOTG Hammer higlight
 
 # 🐘 HOW TO COMPILE
 - If you want to compile the mod yourself, follow these steps: open the repo in IntelliJ, click on the Gradle icon on the right,

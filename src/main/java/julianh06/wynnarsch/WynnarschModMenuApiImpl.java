@@ -2,6 +2,7 @@ package julianh06.wynnarsch;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
+import com.wynntils.utils.colors.CustomColor;
 import julianh06.wynnarsch.notg.cannon.CannonOverlay;
 import julianh06.wynnarsch.notg.cannon.ColorEnum;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
@@ -10,6 +11,8 @@ import net.fabricmc.loader.api.FabricLoader;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
+import me.shedaniel.math.Color;
+
 
 public class WynnarschModMenuApiImpl implements ModMenuApi {
     private static final boolean IS_CLOTH_LOADED = FabricLoader.getInstance().isModLoaded("cloth-config");
@@ -49,6 +52,13 @@ public class WynnarschModMenuApiImpl implements ModMenuApi {
                     .startSubCategory(Text.of("Overlay"));
 
             overlaySub.add(builder.entryBuilder()
+                    .startBooleanToggle(Text.of("Enable/Disable the Cannon Overlay"), WynnarschConfig.INSTANCE.NotgCannonOverlayToggle)
+                    .setDefaultValue(true)
+                    .setSaveConsumer(newValue -> WynnarschConfig.INSTANCE.NotgCannonOverlayToggle = newValue)
+                    .build()
+            );
+
+            overlaySub.add(builder.entryBuilder()
                     .startIntField(Text.of("Cannon Overlay Block Height"), WynnarschConfig.INSTANCE.NotgCannonBlockHeight)
                     .setDefaultValue(40)
                     .setSaveConsumer(newValue -> WynnarschConfig.INSTANCE.NotgCannonBlockHeight = newValue)
@@ -77,9 +87,16 @@ public class WynnarschModMenuApiImpl implements ModMenuApi {
             );
 
             overlaySub.add(builder.entryBuilder()
-                    .startIntField(Text.of("Cannon Overlay Current Block Highlight Heigh"), WynnarschConfig.INSTANCE.NotgCannonCurrentBlockHeight)
+                    .startIntField(Text.of("Cannon Overlay Indicator Height"), WynnarschConfig.INSTANCE.NotgCannonCurrentBlockHeight)
                     .setDefaultValue(20)
                     .setSaveConsumer(newValue -> WynnarschConfig.INSTANCE.NotgCannonCurrentBlockHeight = newValue)
+                    .build()
+            );
+
+            overlaySub.add(builder.entryBuilder()
+                    .startColorField(Text.of("Cannon Overlay Indicator Color (Hexadecimal)"), WynnarschConfig.INSTANCE.NotgCannonIndicatorColor)
+                    .setDefaultValue2(() -> Color.ofRGB(51, 153, 51))
+                    .setSaveConsumer2(newValue -> WynnarschConfig.INSTANCE.NotgCannonIndicatorColor = newValue)
                     .build()
             );
 
