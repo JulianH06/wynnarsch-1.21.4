@@ -31,8 +31,9 @@ public class CannonOverlay {
     static final String BLUE = "Blue Stained Glass";
     static final String RED = "Red Stained Glass";
     static final String WHITE = "White Stained Glass";
-    static Identifier identifier = IdentifiedLayer.MISC_OVERLAYS;
+    public static Identifier identifier = IdentifiedLayer.MISC_OVERLAYS;
     public static int currentPosition = 0;
+    public static int cannonPosition = -1;
 
     private static final Identifier LAYER_ID = Identifier.of("wynnarsch:hud_cannon");
 
@@ -69,6 +70,7 @@ public class CannonOverlay {
                 Blocks[4] = ColorEnum.RED;
                 return;
             }
+            //inSlimeRoom = true; // also for debug
             if (!inSlimeRoom || client.player == null) {
                 return;
             }
@@ -103,6 +105,7 @@ public class CannonOverlay {
             }
             if (isDifferent) {
                 currentPosition = 0;
+                cannonPosition = 2;
             }
         });
 
@@ -146,6 +149,7 @@ public class CannonOverlay {
 
     public static void onChallengeStarted(RaidInfo info) {
         if(info.getCurrentRoom().getRoomName().equals("Slime Gathering")){
+            cannonPosition = 2;
             inSlimeRoom = true;
         } else {
             inSlimeRoom = false;

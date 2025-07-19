@@ -10,9 +10,12 @@
   },
   "client": [
     "InventoryScreenMixin",
-    "LivingEntityRendererMixin"
+    "LivingEntityRendererMixin",
+    "StringListCellMixin"
   ],
   "mixins": [
-    "RaidChallengeEventMixin"
+    "RaidChallengeEventMixin",
+    "RaidEndedEventMixin",
+    "RaidStartEventMixin"
   ]
 }

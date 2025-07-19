@@ -8,6 +8,7 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.Items;
 import net.minecraft.screen.ScreenHandler;
 import com.wynntils.utils.mc.McUtils;
+import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
 
 import static com.wynntils.utils.wynn.ContainerUtils.clickOnSlot;

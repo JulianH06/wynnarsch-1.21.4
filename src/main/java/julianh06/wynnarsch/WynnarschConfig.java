@@ -10,14 +10,22 @@ import java.io.Reader;
 import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.*;
+
 import me.shedaniel.math.Color;
 
 public class WynnarschConfig {
+    //Hider
     public boolean partyMemberHide = true;
     public int maxHideDistance = 3;
+    public boolean onlyInNotg = false;
+
+    //Cannon Hotkeys
     public int keyNotgCannonLeftID = GLFW.GLFW_KEY_A;
     public int keyNotgCannonShootID = GLFW.GLFW_KEY_SPACE;
     public int keyNotgCannonRightID = GLFW.GLFW_KEY_D;
+
+    //Cannon Overlay
     public int NotgCannonCurrentBlockHeight = 20;
     public int NotgCannonBlockHeight = 40;
     public int NotgCannonBlockWidth = 40;
@@ -26,6 +34,20 @@ public class WynnarschConfig {
     public boolean NotgCannonOverlayPreview = false;
     public boolean NotgCannonOverlayToggle = true;
     public Color NotgCannonIndicatorColor = Color.ofRGB(51, 153, 51);
+
+    //Chat Notifier Text
+    public List<String> words = new ArrayList<>();
+    public float TextScale = 5f;
+    public int TextOffsetX = 75;
+    public int TextOffsetY = 40;
+    public int TextDurationInMs = 2000;
+    public Color TextColor = Color.ofRGB(255, 255, 255);
+    public boolean NotifierPreview = false;
+
+    //Chat Notifier Sound
+    public String Sound = "entity.experience_orb.pickup";
+    public float SoundVolume = 0.1f;
+    public float SoundPitch = 1;
 
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final Path CONFIG_PATH = FabricLoader.getInstance()

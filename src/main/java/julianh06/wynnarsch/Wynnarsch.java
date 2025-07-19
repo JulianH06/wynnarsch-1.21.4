@@ -1,5 +1,6 @@
 package julianh06.wynnarsch;
 
+import julianh06.wynnarsch.chat.ChatNotificator;
 import julianh06.wynnarsch.notg.BossPlayerHider;
 import julianh06.wynnarsch.notg.cannon.CannonHotkeys;
 import julianh06.wynnarsch.notg.cannon.CannonOverlay;
@@ -28,5 +29,6 @@ public class Wynnarsch implements ClientModInitializer {
 		CannonHotkeys.registerCanonHotkeys();
 		CannonOverlay.registerCanonOverlay();
 		BossPlayerHider.registerBossPlayerHider();
+		ChatNotificator.registerChatNotificator();
 	}
 }
