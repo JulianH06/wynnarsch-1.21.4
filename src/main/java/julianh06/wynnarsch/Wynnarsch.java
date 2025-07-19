@@ -1,27 +1,24 @@
 package julianh06.wynnarsch;
 
+import com.wynntils.utils.mc.McUtils;
 import julianh06.wynnarsch.chat.ChatNotificator;
 import julianh06.wynnarsch.notg.BossPlayerHider;
 import julianh06.wynnarsch.notg.cannon.CannonHotkeys;
 import julianh06.wynnarsch.notg.cannon.CannonOverlay;
 import net.fabricmc.api.ClientModInitializer;
 
+import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.literal;
+import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Wynnarsch implements ClientModInitializer {
 	public static final String MOD_ID = "wynnarsch";
-
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
 	public void onInitializeClient() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
 		WynnarschConfig.load();
 
 		Runtime.getRuntime().addShutdownHook(new Thread(WynnarschConfig::save));
@@ -30,5 +27,17 @@ public class Wynnarsch implements ClientModInitializer {
 		CannonOverlay.registerCanonOverlay();
 		BossPlayerHider.registerBossPlayerHider();
 		ChatNotificator.registerChatNotificator();
+
+		ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
+			dispatcher.register(
+					literal("wynnarsch")
+					.then(literal("config")
+							.executes(context -> {
+								WynnarschConfig.openConfigScreen();
+								return 1;
+							})
+					)
+			);
+		});
 	}
 }

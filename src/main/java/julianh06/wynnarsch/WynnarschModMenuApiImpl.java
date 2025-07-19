@@ -10,6 +10,8 @@ import me.shedaniel.clothconfig2.impl.builders.DropdownMenuBuilder;
 import me.shedaniel.clothconfig2.impl.builders.SubCategoryBuilder;
 import net.fabricmc.loader.api.FabricLoader;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -21,6 +23,11 @@ import java.util.List;
 
 public class WynnarschModMenuApiImpl implements ModMenuApi {
     private static final boolean IS_CLOTH_LOADED = FabricLoader.getInstance().isModLoaded("cloth-config");
+    public Screen configScreen = null;
+
+    public void registerConfig() {
+        getModConfigScreenFactory().create(MinecraftClient.getInstance().currentScreen);
+    }
 
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
@@ -290,7 +297,7 @@ public class WynnarschModMenuApiImpl implements ModMenuApi {
             Cannon.addEntry(overlaySub.build());
             Cannon.addEntry(hotkeySub.build());
 
-            return builder.build();
+            return configScreen = builder.build();
         };
     }
 }

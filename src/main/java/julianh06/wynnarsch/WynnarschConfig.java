@@ -3,6 +3,7 @@ package julianh06.wynnarsch;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.client.MinecraftClient;
 import org.lwjgl.glfw.GLFW;
 
 import java.io.IOException;
@@ -15,6 +16,8 @@ import java.util.*;
 import me.shedaniel.math.Color;
 
 public class WynnarschConfig {
+    static WynnarschModMenuApiImpl modMenuApiImpl;
+
     //Hider
     public boolean partyMemberHide = true;
     public int maxHideDistance = 3;
@@ -74,5 +77,15 @@ public class WynnarschConfig {
             System.err.println("[Wynnarsch] Couldn't write the config file:");
             e.printStackTrace();
         }
+    }
+
+    public static void openConfigScreen() {
+        if(modMenuApiImpl == null) {
+            modMenuApiImpl = new WynnarschModMenuApiImpl();
+        }
+        if(modMenuApiImpl.configScreen == null) {
+            modMenuApiImpl.registerConfig();
+        }
+        MinecraftClient.getInstance().send(() -> MinecraftClient.getInstance().setScreen(modMenuApiImpl.configScreen));
     }
 }
