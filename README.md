@@ -13,7 +13,7 @@
   <img src="https://github.com/user-attachments/assets/80be499a-f569-4f58-9e51-bd1691a4d532" width="600px" alt="Showcase"/>
 
   
-- Hide nearby party members for better vision (Currently works everywhere, i will change it to only happen while in raid bosses at some point in the future (but its toggleable and you can change the distance!))
+- Hide nearby party members for better vision (You can choose to make this work everywhere or just in NOTG)
 
   <img src="https://github.com/user-attachments/assets/9888c912-6391-469a-ac6c-bd344ca11236" width="600px" alt="Showcase"/>
 
