@@ -2,14 +2,12 @@ package julianh06.wynnarsch.chat;
 
 import com.wynntils.utils.mc.McUtils;
 import julianh06.wynnarsch.WynnarschConfig;
-import julianh06.wynnarsch.notg.cannon.CannonOverlay;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.HudLayerRegistrationCallback;
 import net.fabricmc.fabric.api.client.rendering.v1.IdentifiedLayer;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -22,8 +20,8 @@ public class ChatNotificator {
     public static String shownText;
 
     public static void registerChatNotificator() {
-           //"Congratulations, you have maxed the Aspect of the Anvil Drop.
-        ClientReceiveMessageEvents.CHAT.register((message, signedMessage, sender, params, receptionTimestamp) -> {
+        //For messages sent by wynnarsch (they are handled different than messages from the server
+        ClientReceiveMessageEvents.GAME.register((message, sender) -> {
             for(String notificator : WynnarschConfig.INSTANCE.words) {
                 if(!notificator.contains("|")) return;
                 String[] parts = notificator.split("\\|");
@@ -33,7 +31,6 @@ public class ChatNotificator {
                     McUtils.playSoundAmbient(SoundEvent.of(Identifier.of(WynnarschConfig.INSTANCE.Sound)), WynnarschConfig.INSTANCE.SoundVolume, WynnarschConfig.INSTANCE.SoundPitch);
                     showingText = true;
                     activeUntil = System.currentTimeMillis() + WynnarschConfig.INSTANCE.TextDurationInMs; // 3 seconds
-                    System.out.println("ACTIVEUNTIL: " + activeUntil);
                     shownText = parts[1];
                     break;
                 }
@@ -42,7 +39,6 @@ public class ChatNotificator {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (showingText && System.currentTimeMillis() > activeUntil) {
-                System.out.println("CURRENTTIME: " + System.currentTimeMillis());
                 showingText = false;
             }
         });
@@ -67,6 +63,24 @@ public class ChatNotificator {
                 matrices.pop();
             });
         });
+
+    }
+
+    //For messages sent by the server (basically everything except messages from wynnarsch)
+    public static void onPlayerChatReceived(Text message) {
+        for(String notificator : WynnarschConfig.INSTANCE.words) {
+            if(!notificator.contains("|")) return;
+            String[] parts = notificator.split("\\|");
+            if(message.getString().toLowerCase().contains(parts[0].toLowerCase())) {
+                MinecraftClient client = MinecraftClient.getInstance();
+                if(client.player == null || client.world == null) { return; }
+                McUtils.playSoundAmbient(SoundEvent.of(Identifier.of(WynnarschConfig.INSTANCE.Sound)), WynnarschConfig.INSTANCE.SoundVolume, WynnarschConfig.INSTANCE.SoundPitch);
+                showingText = true;
+                activeUntil = System.currentTimeMillis() + WynnarschConfig.INSTANCE.TextDurationInMs;
+                shownText = parts[1];
+                break;
+            }
+        }
 
     }
 }
